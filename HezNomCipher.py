@@ -53,36 +53,29 @@ def main_prog():  # main program body begins
     ui1 = str(input("Choose here: "))
     if ui1 == 'E':
         def encryption():  # encryption function
-            text = input("Enter your text: ")  # normal text
+            text = str(input("Enter your text: "))  # normal text
             key = int(input("Key: "))
-            key0 = str(key)
-            if len(key0) == 6:
-                output = ""
-                for char in text:  # for each character in the text entered,
-                    output += chr(ord(char) ^ key)  # ord finds the scode. chr turns scode back to character
-                    if len(output) == len(text):
-                        print(output)
-                        _continue()
-            else:
-                print(f"Invalid key length:{len(key0)}")
-                sleep(2)
-                encryption()
+            # key0 = str(key)
+            # if len(key0) == 6:
+            output = ""
+            for char in text:  # for each character in the text entered,
+                output += chr(ord(char) ^ key)  # ord finds the scode. chr turns scode back to character
+                if len(output) == len(text):
+                    print(output)
+                    _continue()
         encryption()
     elif ui1 == 'D':
         def decryption():  # decryption  function
             cypher_text = input("Enter encrypted text:")
             key1 = int(input("Enter your key:"))
-            key00 = str(key1)
-            if len(key00) == 6:
-                output1 = ""
-                for char in cypher_text:
-                    output1 += chr(ord(char) ^ key1)
+            # key00 = str(key1)
+            # if len(key00) == 6:
+            output1 = ""
+            for char in cypher_text:
+                output1 += chr(ord(char) ^ key1)
+                if len(output1) == len(cypher_text):
                     print(output1)
                     _continue()
-            else:
-                print(f"Invalid key length:{len(key00)}")
-                sleep(2)
-                decryption()
         decryption()
     elif ui1 == 'exit':
         def exit_program():
