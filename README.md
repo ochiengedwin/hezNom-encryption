@@ -46,7 +46,11 @@ TO UNDERSTAND THE LOGICS BEHIND THE ENCRYPTION / DECRYPTION
     
     - 1 is the resulting output after going through the encryption. chr() function then converts 1 into its coefficient ascii value and that becomes the cypher text.
     - Key points to note:
-          1. The key must not be 0 otherwise the output will still be identical to the input.
-          2. The length of the key ranges from 1 to 6, that means key can be 1 - 999999 past this the program generates an error.
-          3. The output can still be encrypted using the same key and get back the plain text as XOR function reverts it back.
-          4. To make it hard for an intruder to bruteforce your key, use bigger numbers in the range above.
+          
+         1. The key must not be 0 otherwise the output will still be identical to the input.
+          
+         2. The length of the key ranges from 1 to 6, that means key can be 1 - 999999 past this the program generates an error.
+          
+         3. The output can still be encrypted using the same key and get back the plain text as XOR function reverts it back.
+          
+         4. To make it hard for an intruder to bruteforce your key, use bigger numbers in the range above.
